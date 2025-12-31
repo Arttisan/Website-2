@@ -26,12 +26,26 @@
     <div class="container">
         <h1>Contact</h1>
 
-        <form class="contact-form">
-            <input type="text" placeholder="Nama">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Pesan"></textarea>
-            <button type="submit">Kirim</button>
-        </form>
+    <form
+    class="contact-form"
+    action="https://formspree.io/f/xaqnwzav"
+    method="POST"
+    >
+        <input type="text" name="name" placeholder="Nama" required>
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <textarea name="message" placeholder="Pesan" required></textarea>
+
+        <!-- OPTIONAL: subject email -->
+        <input type="hidden" name="_subject" value="Inquiry dari Website Arttisan.ID">
+
+        <!-- Redirect setelah submit -->
+        <input type="hidden" name="_redirect" value="thank-you.html">
+
+        <button type="submit">Kirim</button>
+    </form>
+
 
         <p>
             <a href="https://wa.me/62881082286668" target="_blank">
